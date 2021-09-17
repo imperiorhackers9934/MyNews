@@ -16,7 +16,8 @@ def speak(news):
     engine.say(news)
     engine.runAndWait()
 def get_news(x):
-    src = requests.get('https://newsapi.org/v2/top-headlines?country=in&apiKey=0d67f467dfff4f0281713fcd65eaa1d4')
+    key = ""
+    src = requests.get(f'https://newsapi.org/v2/top-headlines?country=in&apiKey={key}')
     if(src.status_code == 404 or src.status_code == False):
         print("===================================================")
         print("----------------[News Not Found]------------------")
